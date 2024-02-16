@@ -19,6 +19,7 @@ symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
 
 # Generating the random password
 
+password: 56
 
 
 
