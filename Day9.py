@@ -11,6 +11,9 @@ print(''''
 '')
 
 # Introductory message
+# This program takes bid input of different users and finds the highest
+
+# Welcome message
 print("Welcome to the secret aution program")
 
 # variable declaration
