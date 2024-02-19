@@ -32,5 +32,6 @@ while other_bidders == True:
     else:
         other_bidders = False
 
-# Printing the result          
+# Printing the result 
+os.system('cls')         
 print(f"The winner is {bidder_name} with a bid of ${highest_bid}")
