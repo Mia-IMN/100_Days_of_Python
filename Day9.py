@@ -13,14 +13,16 @@ print(''''
 # Introductory message
 print("Welcome to the secret aution program")
 
+# variable declaration
 highest_bid = 0
 bidder_name = "Error: Nothing to see here"
 other_bidders = True
  
+# The magic :)
 while other_bidders == True:
     os.system('cls')
     name = input("What is your name?: ")
-    bid = int(input("What is your bid?: "))
+    bid = int(input("What is your bid?: $"))
     if bid > highest_bid:
         highest_bid = bid
         bidder_name = name
@@ -29,5 +31,6 @@ while other_bidders == True:
         other_bidders = True
     else:
         other_bidders = False
-            
+
+# Printing the result          
 print(f"The winner is {bidder_name} with a bid of ${highest_bid}")
