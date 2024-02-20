@@ -50,5 +50,7 @@ while should_continue == True:
     elif next_operation == "y":
         next_operator = input("Pick an operation: ")
         next_num = int(input("What's the next number? "))
-        next_result = calculator_function(result, next_num, next_operation)
+        next_result = calculator_function(result, next_num, next_operator)
         print(next_result)
+    
+    should_continue = False
