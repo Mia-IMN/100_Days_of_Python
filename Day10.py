@@ -1,7 +1,7 @@
-
+import os
 
 print(
-    """"
+    """
  _____________________
 |  _________________  |
 | |  Mia's    Calc  | |
@@ -16,7 +16,7 @@ print(
 | | . | 0 | = | | / | |
 | |___|___|___| |___| |
 |_____________________|
-    """"
+    """
 )
 
 def calculator_function(num1, num2, operator):
@@ -35,14 +35,20 @@ def calculator_function(num1, num2, operator):
 
 should_continue = True
 
-while should_continue == True
+while should_continue == True:
     first_num = int(input("What's the first number?: "))
     print("+\n-\n*\n/\n")
     operator = input("Pick an operation: ")
-    next_num = int(input("What's the next number?: "))
+    second_num = int(input("What's the next number?: "))
 
+    result = calculator_function(first_num, second_num, operator)
+    print(result)
 
-
-    next_operation = input("Type 'y' to continue calculating with 10.0, or type 'n' to start a new calculation: ")
-    if next_operation == 'n':
-        should_continue == False
+    next_operation = input(f"Type 'y' to continue calculating with {result}, or type 'n' to start a new calculation: ")
+    if next_operation == "n":
+        os.system('cls')
+    elif next_operation == "y":
+        next_operator = input("Pick an operation: ")
+        next_num = int(input("What's the next number? "))
+        next_result = calculator_function(result, next_num, next_operation)
+        print(next_result)
