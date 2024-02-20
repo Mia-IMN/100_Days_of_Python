@@ -37,7 +37,7 @@ should_continue = True
 
 while should_continue == True:
     first_num = int(input("What's the first number?: "))
-    print("+\n-\n*\n/\n")
+    print("+\n-\n*\n/")
     operator = input("Pick an operation: ")
     second_num = int(input("What's the next number?: "))
 
