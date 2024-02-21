@@ -19,40 +19,45 @@ while resume == True:
 
     """
     )
-
-    def winner(){
-
-    }
+    players_score = 0
+    def winner(player, computer):
+        for i in player:
+            players_score += player[i]
+        return players_score
 
     def first_two_cards():
         card_list = []
         for i in range(1, 3):
-            a = random.randint(1, 11)
+            a = random.randint(1, 10)
             card_list.append(a)
-            b = random.randint(1, 11)
+            b = random.randint(1, 10)
             card_list.append(b)
-            return(f"Your cards: {card_list}")
-    players_card = first_two_card()
-    print(players_card)
+            return card_list
+    
+    players_card = first_two_cards()
+    print(f"Your cards: {players_card}")
     
     def card():
-        random.randint(1, 11)
+        return random.randint(1, 10)
 
     
     computers_first_card = card()
+    print(f"Computer's first card: {computers_first_card}")
+
     computers_total_card = []
     computers_total_card.append(computers_first_card)
-    print(f"Computer's first card: {computers_first_card}")
+    
     computers_second_card = card()
     computers_total_card.append(computers_second_card)
 
-    continue = input("Type 'y' to get another card, type 'n' to pass: ")
-    if continue == 'y':
+    continue_game = input("Type 'y' to get another card, type 'n' to pass: ")
+    if continue_game == 'n':
         players_next_card = card()
     else:
         print(f"Your final hand: {players_card}")
         print(f"Computer's final hand: {computers_total_card}")
+        print(f"Your final score is {winner(players_card, computers_total_card)}")
 
-        
+
     resume = False
 
