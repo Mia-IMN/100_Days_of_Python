@@ -41,16 +41,22 @@ while resume == True:
             b = random.randint(1, 10)
             card_list.append(b)
             return card_list
+
+    def cards_sum(cardList):
+        card_sum = 0
+        for i in cardList:
+            card_sum += i
+        return card_sum
     
     players_card = first_two_cards()
-    print(f"Your cards: {players_card}")
+    print(f"Your cards: {players_card}, current score: {cards_sum(players_card)}")
     
     def card():
         return random.randint(1, 10)
 
     
     computers_first_card = card()
-    print(f"Computer's first card: {computers_first_card}")
+    print(f"Computer's first card: {computers_first_card}\n")
 
     computers_total_card = []
     computers_total_card.append(computers_first_card)
@@ -61,6 +67,12 @@ while resume == True:
     continue_game = input("Type 'y' to get another card, type 'n' to pass: ")
     if continue_game == 'y':
         players_next_card = card()
+        players_card.append(players_next_card)
+        print(f"\nYour cards: {players_card}, current score: {cards_sum(players_card)}")
+        print(f"Computer's final hand: {computers_second_card}")
+        print(f"Computer's cards: {computers_total_card}, current score: {cards_sum(computers_total_card)}\n")
+        winner(players_card, computers_total_card)
+
     else:
         print(f"Your final hand: {players_card}")
         print(f"Computer's final hand: {computers_total_card}")
