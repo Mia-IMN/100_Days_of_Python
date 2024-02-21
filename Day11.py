@@ -20,6 +20,10 @@ while resume == True:
     """
     )
 
+    def winner(){
+
+    }
+
     def first_two_cards():
         card_list = []
         for i in range(1, 3):
@@ -33,14 +37,22 @@ while resume == True:
     
     def card():
         random.randint(1, 11)
-    computers_card = card()
-    print(f"Computer's first card: {computers_card}")
+
+    
+    computers_first_card = card()
+    computers_total_card = []
+    computers_total_card.append(computers_first_card)
+    print(f"Computer's first card: {computers_first_card}")
+    computers_second_card = card()
+    computers_total_card.append(computers_second_card)
 
     continue = input("Type 'y' to get another card, type 'n' to pass: ")
     if continue == 'y':
         players_next_card = card()
     else:
         print(f"Your final hand: {players_card}")
+        print(f"Computer's final hand: {computers_total_card}")
 
+        
     resume = False
 
