@@ -20,16 +20,27 @@ while resume == True:
     """
     )
 
-    def card():
+    def first_two_cards():
         card_list = []
         for i in range(1, 3):
             a = random.randint(1, 11)
             card_list.append(a)
             b = random.randint(1, 11)
             card_list.append(b)
-            print(f"Your cards: {card_list}")
+            return(f"Your cards: {card_list}")
+    players_card = first_two_card()
+    print(players_card)
+    
+    def card():
+        random.randint(1, 11)
+    computers_card = card()
+    print(f"Computer's first card: {computers_card}")
 
-    computer_card = random.randint(1, 11)
-    print(f("Computer's first card: {computer_card}"))
+    continue = input("Type 'y' to get another card, type 'n' to pass: ")
+    if continue == 'y':
+        players_next_card = card()
+    else:
+        print(f"Your final hand: {players_card}")
+
     resume = False
 
