@@ -1,10 +1,15 @@
 
 import random
-resume = False 
-start_game = input("Do you want to play a game of Blackjack? Type 'y' or 'n': ")
-if start_game == 'y':
-    resume = True
-else: resume = False
+
+
+def game_time():
+    start_game = input("\nDo you want to play a game of Blackjack? Type 'y' or 'n': ")
+    if start_game == 'y':
+        resume = True
+    else: resume = False
+    return resume
+
+resume = game_time()
 
 while resume == True:
     print(
@@ -30,6 +35,8 @@ while resume == True:
         if players_score > computer_score:
             if players_score <= 21:
                 print("You win")
+            else:
+                print("You went over. You lose :()")
         else: print("You lose")
         
 
@@ -68,16 +75,15 @@ while resume == True:
     if continue_game == 'y':
         players_next_card = card()
         players_card.append(players_next_card)
-        print(f"\nYour cards: {players_card}, current score: {cards_sum(players_card)}")
+        print(f"\nYour cards: {players_card}, final score: {cards_sum(players_card)}")
         print(f"Computer's final hand: {computers_second_card}")
-        print(f"Computer's cards: {computers_total_card}, current score: {cards_sum(computers_total_card)}\n")
+        print(f"Computer's cards: {computers_total_card}, final score: {cards_sum(computers_total_card)}\n")
         winner(players_card, computers_total_card)
 
     else:
-        print(f"Your final hand: {players_card}")
-        print(f"Computer's final hand: {computers_total_card}")
+        print(f"\nYour final hand: {players_card}, final score: {cards_sum(players_card)}")
+        print(f"Computer's final hand: {computers_total_card}, final score: {cards_sum(computers_total_card)}\n")
         winner(players_card, computers_total_card)
 
-
-    resume = False
+    game_time()
 
