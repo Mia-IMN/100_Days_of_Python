@@ -19,11 +19,19 @@ while resume == True:
 
     """
     )
-    players_score = 0
+    
     def winner(player, computer):
+        players_score = 0
+        computer_score = 0
         for i in player:
-            players_score += player[i]
-        return players_score
+            players_score += i
+        for i in computer:
+            computer_score += i
+        if players_score > computer_score:
+            if players_score <= 21:
+                print("You win")
+        else: print("You lose")
+        
 
     def first_two_cards():
         card_list = []
@@ -51,12 +59,12 @@ while resume == True:
     computers_total_card.append(computers_second_card)
 
     continue_game = input("Type 'y' to get another card, type 'n' to pass: ")
-    if continue_game == 'n':
+    if continue_game == 'y':
         players_next_card = card()
     else:
         print(f"Your final hand: {players_card}")
         print(f"Computer's final hand: {computers_total_card}")
-        print(f"Your final score is {winner(players_card, computers_total_card)}")
+        winner(players_card, computers_total_card)
 
 
     resume = False
