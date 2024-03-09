@@ -1,5 +1,5 @@
 
-
+# Ascii art
 print(
     """
     ___________________________________________
@@ -20,4 +20,18 @@ _/____/_(___/_|/_|/__(___ _/_____
     """
 )
 
-data 
+# Program's data 
+data = [
+  {
+    'name': 'Instagram',
+    'follower_count': 346,
+    'description': 'Social media platform',
+    'country': 'United States'
+  },
+  {
+    'name': 'Cristiano Ronaldo',
+    'follower_count': 215,
+    'description': 'Footballer',
+    'country': 'Portugal'
+  },
+]
