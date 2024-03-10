@@ -1,4 +1,5 @@
 # This is a program for a simple form of the higher-lower game
+# In this game you'd be giving two options to choose which has the highest instagram follower count.
 
 import random 
 
