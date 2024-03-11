@@ -93,7 +93,22 @@ data = [
   }
 ]
 
-first_comparison = random.randint(0, len(data))
-print(data[first_comparison])
+first_comparison = random.randint(0, len(data)-1)
 
-print(f"compare A: {data[first_comparison]['name']}, {data[first_comparison]['description']}")
+
+print(f"compare A: {data[first_comparison]['name']}, a {data[first_comparison]['description']}, from {data[first_comparison]['country']}")
+print(
+    """
+ _    __    
+| |  / /____
+| | / / ___/
+| |/ (__  ) 
+|___/____(_)
+            
+"""
+)
+
+second_comparison = random.randint(0, len(data)-1)
+if second_comparison == first_comparison:
+    second_comparison += 1
+print(f"compare A: {data[second_comparison]['name']}, a {data[second_comparison]['description']}, from {data[second_comparison]['country']}")
