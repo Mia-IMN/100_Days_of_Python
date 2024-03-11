@@ -95,3 +95,5 @@ data = [
 
 first_comparison = random.randint(0, len(data))
 print(data[first_comparison])
+
+print(f"compare A: {data[first_comparison]}")
