@@ -98,7 +98,7 @@ if second_comparison == first_comparison:
     second_comparison -= 1
 
 score = 0
-
+response = False
 def start():
   print(f"compare A: {data[first_comparison]['name']}, a {data[first_comparison]['description']}, from {data[first_comparison]['country']}")
   print(
@@ -112,17 +112,24 @@ def start():
   """
   )
   print(f"compare A: {data[second_comparison]['name']}, a {data[second_comparison]['description']}, from {data[second_comparison]['country']}")
-  response = input('Who has more followers? Type "A" or "B": ')
+  resp = input('Who has more followers? Type "A" or "B": ')
+  if resp == "A":
+     response = True
+  else: 
+     response = False
+  return response
   
-  if response == "A" and data[first_comparison]['follower_count'] > data[second_comparison]['follower_count']:
+
+def update_score(response):
+  if response == True and data[first_comparison]['follower_count'] > data[second_comparison]['follower_count']:
     #if response == "A":
-    print("You're right! current score: ")
-    
+    print("You're right!")
+    score += 1
+    return score
   else: print("You're wrong! oops")
+  print()
 
-def update_score(score):
-   
 
-print(f"Your current score is: {update_score()}")
-start()
+print(f"Your current score is: {score}")
+update_score(start())
 
