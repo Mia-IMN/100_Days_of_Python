@@ -151,3 +151,8 @@ update_score(start())
 # Score keeping.
 
 # Make the game repeatable.
+
+# Making account at position B become the next account at position A.
+
+# Clear the screen between rounds.
+#hgellooeie
