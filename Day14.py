@@ -133,3 +133,21 @@ def update_score(response):
 print(f"Your current score is: {score}")
 update_score(start())
 
+# Display art
+
+
+# Generate a random account from the game data.
+
+
+# Format the account data into printable format
+
+
+# Check if user is correct.
+## Get follower count of each account.
+## Use if statement to check if user is correct.
+
+# Give user feedback on their guess.
+
+# Score keeping.
+
+# Make the game repeatable.
