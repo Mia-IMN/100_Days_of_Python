@@ -16,7 +16,6 @@ print(
   / /   / __ \ | /| / / _ \/ ___/    
  / /___/ /_/ / |/ |/ /  __/ /        
 /_____/\____/|__/|__/\___/_/         
-                                                                
     """
 )
 
@@ -98,11 +97,9 @@ second_comparison = random.randint(0, len(data)-1)
 if second_comparison == first_comparison:
     second_comparison -= 1
 
-def start():
-  if data[first_comparison]['follower_count'] > data[second_comparison]['follower_count']:
-    if response == "A":
-      print("You're right! current score: ")
+score = 0
 
+def start():
   print(f"compare A: {data[first_comparison]['name']}, a {data[first_comparison]['description']}, from {data[first_comparison]['country']}")
   print(
     """
@@ -116,7 +113,16 @@ def start():
   )
   print(f"compare A: {data[second_comparison]['name']}, a {data[second_comparison]['description']}, from {data[second_comparison]['country']}")
   response = input('Who has more followers? Type "A" or "B": ')
+  
+  if response == "A" and data[first_comparison]['follower_count'] > data[second_comparison]['follower_count']:
+    #if response == "A":
+    print("You're right! current score: ")
+    
+  else: print("You're wrong! oops")
 
+def update_score(score):
+   
 
+print(f"Your current score is: {update_score()}")
 start()
 
