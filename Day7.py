@@ -1,8 +1,8 @@
 # coding Hangman game
 
-# Steps
+import random
 
-word_list = ["ardvark", "baboon", "camel"]
+# Steps
 
 #TODO1 - Randomly choose a word from the word_list and assign it to a 
 # variable called chosen_word
@@ -12,3 +12,17 @@ word_list = ["ardvark", "baboon", "camel"]
 
 #TODO3 - Check if the user guessed (guess) is one of the letters in 
 # chosen_word
+
+word_list = ["ardvark", "baboon", "camel"]
+
+guess = input("Guess a letter: ")
+
+chosen_number = random.randint(1, len(word_list)- 1)
+
+chosen_word = word_list[chosen_number]
+
+print (chosen_number)
+
+print(chosen_word)
+
+for i in chosen_word:
