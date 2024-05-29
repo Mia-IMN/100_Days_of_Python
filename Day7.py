@@ -10,7 +10,7 @@ word_list = ["ardvark", "baboon", "camel"]
 #TODO1 - Randomly choose a word from the word_list and assign it to a 
 # variable called chosen_word
 
-chosen_number = random.choice(word_list)
+chosen_word = random.choice(word_list)
 
 #TODO2 - Ask the user to guess a letter and assign their answer to a 
 # variable called guess. Make guess lowercase.
@@ -30,4 +30,4 @@ for i in chosen_word:
 
 for letter in chosen_word:
     display = '-'
-    print(display)
+    print(display, end="")
