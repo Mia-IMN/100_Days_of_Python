@@ -17,7 +17,7 @@ word_list = ["ardvark", "baboon", "camel"]
 
 guess = input("Guess a letter: ")
 
-chosen_number = random.randint(0,len(word_list)- 1)
+chosen_number = random.choice(word_list)
 
 chosen_word = word_list[chosen_number]
 
