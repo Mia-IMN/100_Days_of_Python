@@ -26,12 +26,15 @@ guess = input("Guess a letter: ").lower
 #TODO3 - Check if the user guessed (guess) is one of the letters in 
 # chosen_word
 
-
+num = 0
 for i in chosen_word:
     if guess == i:
         print("True")
+        display[num] = i
     else:
         print ("False")
+    num += 1
 
+print(display, end="")
 # Step - 2
 
