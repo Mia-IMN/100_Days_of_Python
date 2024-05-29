@@ -4,6 +4,8 @@ import random
 
 
 word_list = ["ardvark", "baboon", "camel"]
+print(word_list)
+print("")
 
 # Steps - 1
 
@@ -18,6 +20,7 @@ for letter in chosen_word:
     display += "_"
 
 print(display)
+print("")
 
 #TODO2 - Ask the user to guess a letter and assign their answer to a 
 # variable called guess. Make guess lowercase.
@@ -34,5 +37,6 @@ for i in chosen_word:
     num += 1
 
 print(display)
+print("")
 # Step - 2
 
