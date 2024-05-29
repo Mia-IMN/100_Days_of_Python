@@ -12,6 +12,12 @@ word_list = ["ardvark", "baboon", "camel"]
 
 chosen_word = random.choice(word_list)
 
+print("Guess a possible letter in this word")
+for letter in chosen_word:
+    display = ' - '
+    print(display, end="")
+print("")
+
 #TODO2 - Ask the user to guess a letter and assign their answer to a 
 # variable called guess. Make guess lowercase.
 
@@ -20,14 +26,12 @@ guess = input("Guess a letter: ").lower
 #TODO3 - Check if the user guessed (guess) is one of the letters in 
 # chosen_word
 
+
 for i in chosen_word:
     if guess == i:
-        print ("True")
+        print("True")
     else:
         print ("False")
 
 # Step - 2
 
-for letter in chosen_word:
-    display = '-'
-    print(display, end="")
