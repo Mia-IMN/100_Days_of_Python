@@ -29,12 +29,12 @@ guess = input("Guess a letter: ").lower()
 
 #TODO3 - Check if the user guessed (guess) is one of the letters in 
 # chosen_word
-
-num = 0
-for i in chosen_word:
-    if guess == i:
-        display.insert(num, i)
-    num += 1
+while True:
+    num = 0
+    for i in chosen_word:
+        if guess == i:
+            display.insert(num, i)
+        num += 1
 
 print(display)
 print("")
