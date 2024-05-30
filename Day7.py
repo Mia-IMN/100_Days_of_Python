@@ -34,12 +34,12 @@ while limit > 0:
     num = 0
     for i in chosen_word:
         if guess == i:
+            del display[num]
             display.insert(num, i)
             limit -=1
         num += 1
-    print(limit)
     print(display)
+    print("")
 
+print("Damn! aren't you good at this!!")
 print("")
-# Step - 2
-
