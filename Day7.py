@@ -25,18 +25,21 @@ print("")
 #TODO2 - Ask the user to guess a letter and assign their answer to a 
 # variable called guess. Make guess lowercase.
 
-guess = input("Guess a letter: ").lower()
 
 #TODO3 - Check if the user guessed (guess) is one of the letters in 
 # chosen_word
+limit = len(chosen_word)
+while limit > 0: 
+    guess = input("Guess a letter: ").lower()
+    num = 0
+    for i in chosen_word:
+        if guess == i:
+            display.insert(num, i)
+            limit -=1
+        num += 1
+    print(limit)
+    print(display)
 
-num = 0
-for i in chosen_word:
-    if guess == i:
-        display.insert(num, i)
-    num += 1
-
-print(display)
 print("")
 # Step - 2
 
