@@ -33,44 +33,27 @@ def run_machine():
         if coffee_type == "espresso":
             if coin > 1.50:
                 coin -= 1.50
-                report["Coffee"] -= 18
-                report["Water"] -= 50
-                report["Money"] += 1.50
-                print(f"Here's your {input}... Enjoy")
-            if report["Coffee"] > 18:
-                report["Coffee"] -= 18
-            else:
-                print("Sorry, there is not enough coffee")
-                return
-            if report["Water"] > 50:
-                report["Water"] -= 50
-            else:
-                print("Sorry, there is not enough Water")
-                return
-            if coin > 1.50:
-                coin -= 1.50
                 report["Money"] += 1.50
                 print(f"Here's {round(coin - 1.50, 2)} in change")
             else:
                 print("Sorry, that's not enough money. Money refunded")
                 return
-            print(f"Here's your {coffee_type}... Enjoy")
-        if coffee_type == "latte":
-            if report["Coffee"] > 24:
-                report["Coffee"] -= 24
+            
+            if report["Coffee"] > 18:
+                report["Coffee"] -= 18
             else:
                 print("Sorry, there is not enough coffee")
                 return
-            if report["Water"] > 200:
-                report["Water"] -= 200
+            
+            if report["Water"] > 50:
+                report["Water"] -= 50
             else:
                 print("Sorry, there is not enough Water")
                 return
-            if report["Milk"] > 150:
-                report["Milk"] -= 150
-            else:
-                print("Sorry, there is not enough Milk")
-                return
+            
+            print(f"Here's your {coffee_type}... Enjoy")
+
+        if coffee_type == "latte":
             if coin > 2.50:
                 coin -= 2.50
                 report["Money"] += 2.50
@@ -78,23 +61,28 @@ def run_machine():
             else:
                 print("Sorry, that's not enough money. Money refunded")
                 return
-            print(f"Here's your {coffee_type}... Enjoy")
-        if coffee_type == "cappuccino":
+            
             if report["Coffee"] > 24:
                 report["Coffee"] -= 24
             else:
                 print("Sorry, there is not enough coffee")
                 return
-            if report["Water"] > 250:
-                report["Water"] -= 250
+            
+            if report["Water"] > 200:
+                report["Water"] -= 200
             else:
                 print("Sorry, there is not enough Water")
                 return
-            if report["Milk"] > 100:
-                report["Milk"] -= 100
+            
+            if report["Milk"] > 150:
+                report["Milk"] -= 150
             else:
                 print("Sorry, there is not enough Milk")
                 return
+            
+            print(f"Here's your {coffee_type}... Enjoy")
+
+        if coffee_type == "cappuccino":
             if coin > 3.00:
                 coin -= 3
                 report["Money"] += 3.00
@@ -102,6 +90,25 @@ def run_machine():
             else:
                 print("Sorry, that's not enough money. Money refunded")
                 return
+            
+            if report["Coffee"] > 24:
+                report["Coffee"] -= 24
+            else:
+                print("Sorry, there is not enough coffee")
+                return
+            
+            if report["Water"] > 250:
+                report["Water"] -= 250
+            else:
+                print("Sorry, there is not enough Water")
+                return
+            
+            if report["Milk"] > 100:
+                report["Milk"] -= 100
+            else:
+                print("Sorry, there is not enough Milk")
+                return
+            
             print(f"Here's your {coffee_type}... Enjoy")
     
     if user_input == "off":
